@@ -284,9 +284,7 @@
 
         <div class="col-md-5 col-md-push-2">
           <div class="form">
-            <div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
-            <div id="errormessage"></div>
-            <form action="envia.php" method="post" role="form" class="contactForm">
+            <form method="post" action="envia.php" enctype="multipart/form-data">
               <div class="form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Nome" data-rule="minlen:4" data-msg="Por favor, insira pelo menos 4 caracteres de nome" required/>
                 <div class="validation"></div>
@@ -299,6 +297,9 @@
                 <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor, escreva algo." placeholder="Mensagem" required></textarea>
                 <div class="validation"></div>
               </div>
+              <div class="form-group">
+              <input type="file" name="upload" id="upload" class="form-control">
+           </div>
               <div class="text-center"><button type="submit">Enviar</button></div>
             </form>
           </div>
